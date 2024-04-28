@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/animalListFragment">
+
+    <fragment
+        android:id="@+id/animalListFragment"
+        android:name="com.example.tema1_android.AnimalListFragment"
+        android:label="AnimalListFragment"
+        tools:layout="@layout/fragment_animal_list" >
+        <action
+            android:id="@+id/action_animalListFragment_to_fragment_big_card"
+            app:destination="@id/fragment_big_card" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_big_card"
+        android:name="com.example.tema1_android.BigCardFragment"
+        android:label="fragment_big_card"
+        tools:layout="@layout/fragment_big_card">
+        <argument
+            android:name="animalName"
+            app:argType="string" />
+        <argument
+            android:name="continentName"
+            app:argType="string" />
+    </fragment>
+</navigation>
