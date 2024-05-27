@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         tools:text="Animal Name"
         android:textSize="20sp"
+        android:textColor="@color/white"
         />
 
     <TextView
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         tools:text="Continent"
         android:textSize="20sp"
+        android:textColor="@color/white"
         />
 
 </LinearLayout>

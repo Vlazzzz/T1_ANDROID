@@ -2,4 +2,6 @@
     <string name="app_name">tema1_android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_of_an_animal">Name of an animal...</string>
+    <string name="name_of_the_continent">Name of the continent...</string>
 </resources>
