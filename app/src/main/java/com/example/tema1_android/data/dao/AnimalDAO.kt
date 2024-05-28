@@ -1,6 +1,7 @@
 package com.example.tema1_android.data.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -16,4 +17,7 @@ interface AnimalDAO {
 
     @Query("SELECT * FROM ${AnimalDbModel.TABLE_NAME}")
     fun getAll(): List<AnimalDbModel>
+
+    @Delete
+    fun delete(animal: AnimalDbModel):
 }
