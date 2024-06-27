@@ -53,6 +53,7 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/ib_delete_northamerican_animal"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/delete_icon_selector"

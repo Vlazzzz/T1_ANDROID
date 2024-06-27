@@ -3,6 +3,7 @@ package com.example.tema1_android.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tema1_android.Models.AfricanAnimal
@@ -18,7 +19,8 @@ import com.example.tema1_android.R
 
 class AnimalsAdapter(
     private val animals: List<AnimalModel>,
-    private val goToBigCard: (String, String) -> Unit
+    private val goToBigCard: (String, String) -> Unit,
+    private val deleteItem: (AnimalModel) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -91,91 +93,126 @@ class AnimalsAdapter(
     inner class EuropeanAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_european_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_european_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_european_animal)
         }
         fun bind(animal: EuropeanAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class AfricanAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_african_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_african_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_african_animal)
         }
         fun bind(animal: AfricanAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class AsianAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_asian_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_asian_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_asian_animal)
         }
         fun bind(animal: AsianAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class AntarcticAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_antarctic_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_antarctic_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_antarctic_animal)
         }
         fun bind(animal: AntarcticAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class AustralianAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_australian_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_australian_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_australian_animal)
         }
         fun bind(animal: AustralianAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class NorthAmericanAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_northamerican_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_northamerican_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_northamerican_animal)
         }
         fun bind(animal: NorthAmericanAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 
     inner class SouthAmericanAnimalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
         val continentTextView: TextView
+        val deleteBtn: ImageButton
         init {
             nameTextView = itemView.findViewById(R.id.tv_southamerican_animal_card)
             continentTextView = itemView.findViewById(R.id.tv_southamerican_continent_card)
+            deleteBtn = itemView.findViewById(R.id.ib_delete_southamerican_animal)
         }
         fun bind(animal: SouthAmericanAnimal) {
             nameTextView.text = animal.name
             continentTextView.text = animal.continent
+            deleteBtn.setOnClickListener {
+                deleteItem(animal)
+            }
         }
     }
 }
